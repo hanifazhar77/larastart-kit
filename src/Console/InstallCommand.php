@@ -51,38 +51,6 @@ class InstallCommand extends Command implements PromptsForMissingInput
         return 1;
     }
 
-     /**
-     * Install Breeze's tests.
-     *
-     * @return bool
-     */
-    protected function installTests()
-    {
-        (new Filesystem)->ensureDirectoryExists(base_path('tests/Feature'));
-
-        $stubStack = match ($this->argument('stack')) {
-            'stisla' => 'stisla',
-        };
-
-        if ($this->option('pest') || $this->isUsingPest()) {
-            if ($this->hasComposerPackage('phpunit/phpunit')) {
-                $this->removeComposerPackages(['phpunit/phpunit'], true);
-            }
-
-            if (! $this->requireComposerPackages(['pestphp/pest', 'pestphp/pest-plugin-laravel'], true)) {
-                return false;
-            }
-
-            (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/'.$stubStack.'/pest-tests/Feature', base_path('tests/Feature'));
-            (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/'.$stubStack.'/pest-tests/Unit', base_path('tests/Unit'));
-            (new Filesystem)->copy(__DIR__.'/../../stubs/'.$stubStack.'/pest-tests/Pest.php', base_path('tests/Pest.php'));
-        } else {
-            (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/'.$stubStack.'/tests/Feature', base_path('tests/Feature'));
-        }
-
-        return true;
-    }
-
     /**
      * Determine if the given Composer package is installed.
      *
