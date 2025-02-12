@@ -217,4 +217,14 @@ class InstallCommand extends Command implements PromptsForMissingInput
             ),
         ];
     }
+
+    /**
+     * Determine if Pest is being used for testing.
+     *
+     * @return bool
+     */
+    protected function isUsingPest()
+    {
+        return $this->hasComposerPackage('pestphp/pest');
+    }
 }
