@@ -24,7 +24,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Larastart\\LaravelStaterkit\\LaravelStaterkitServiceProvider::class"
+                "Larastart\\LaravelStaterkit\\LaravelStaterkitServiceProvider"
             ]
         }
     },
