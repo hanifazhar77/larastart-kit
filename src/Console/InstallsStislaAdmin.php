@@ -31,10 +31,6 @@ trait InstallsStislaAdmin
         (new Filesystem)->ensureDirectoryExists(app_path('View/Components'));
         (new Filesystem)->copyDirectory(__DIR__ . '/../../stubs/stisla/app/View/Components', app_path('View/Components'));
 
-        // Tests...
-        if (! $this->installTests()) {
-            return 1;
-        }
         
         // Routes...
         copy(__DIR__.'/../../stubs/stisla/routes/web.php', base_path('routes/web.php'));
