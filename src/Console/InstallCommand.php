@@ -25,6 +25,7 @@ class InstallCommand extends Command implements PromptsForMissingInput
     protected $signature = 'larastart:install 
         {stack : The stack to install (stisla)}
         {--pest : Indicate that Pest should be installed}
+        {--composer=global : Absolute path to the Composer binary which should be used to install packages}
     ';
 
     /**
