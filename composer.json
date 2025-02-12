@@ -1,0 +1,31 @@
+{
+    "name": "larastart/laravel-staterkit",
+    "description": "Laravel Packager for Staterkit Admin Template",
+    "type": "library",
+    "require": {
+        "php": "^8.2.0",
+        "illuminate/console": "^11.0",
+        "illuminate/filesystem": "^11.0",
+        "illuminate/support": "^11.0",
+        "illuminate/validation": "^11.0",
+        "symfony/console": "^7.0"
+    },
+    "require-dev": {
+        "laravel/framework": "^11.0",
+        "orchestra/testbench-core": "^9.0",
+        "phpstan/phpstan": "^2.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Larastart\\LaravelStaterkit\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "hanifazhar77",
+            "email": "hanifazharramadhan879@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
