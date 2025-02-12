@@ -22,7 +22,10 @@ class InstallCommand extends Command implements PromptsForMissingInput
      *
      * @var string
      */
-    protected $signature = 'larastart:install {stack : The stack to install (stisla)}';
+    protected $signature = 'larastart:install 
+        {stack : The stack to install (stisla)}
+        {--pest : Indicate that Pest should be installed}
+    ';
 
     /**
      * The console command description.
@@ -38,13 +41,12 @@ class InstallCommand extends Command implements PromptsForMissingInput
      */
     public function handle()
     {
-
         if ($this->argument('stack') === 'stisla') {
             $this->installStislaAdmin();
+            return 0;
         }
 
         $this->components->error('Invalid stack. Supported stacks are [stisla].');
-
         return 1;
     }
 
