@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('library/bootstrap-social/bootstrap-social.css') }}">
 @endpush
 
-@section('main')
+@section('content')
     <div class="card card-primary">
         <div class="card-header">
             <h4>Login</h4>

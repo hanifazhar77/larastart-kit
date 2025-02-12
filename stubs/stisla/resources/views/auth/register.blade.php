@@ -4,8 +4,7 @@
 
 @push('style')
     <!-- CSS Libraries -->
-    <link rel="stylesheet"
-        href="{{ asset('library/selectric/public/selectric.css') }}">
+    <link rel="stylesheet" href="{{ asset('library/selectric/public/selectric.css') }}">
 @endpush
 
 @section('content')
@@ -19,11 +18,8 @@
                 @csrf
                 <div class="form-group">
                     <label for="name">Username</label>
-                    <input id="name"
-                        type="text"
-                        class="form-control @error('name') is-invalid @enderror"
-                        name="name"
-                        autofocus>
+                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"
+                        name="name" autofocus>
                     @error('name')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -32,9 +28,7 @@
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input id="email"
-                        type="email"
-                        class="form-control @error('email') is-invalid @enderror"
+                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
                         name="email">
                     @error('email')
                         <div class="invalid-feedback">
@@ -43,39 +37,29 @@
                     @enderror
                 </div>
 
-                <div class="row">
-                    <div class="form-group col-6">
-                        <label for="password"
-                            class="d-block">Password</label>
-                        <input id="password"
-                            type="password"
-                            class="form-control pwstrength"
-                            data-indicator="pwindicator"
-                            name="password">
-                        <div id="pwindicator"
-                            class="pwindicator">
-                            <div class="bar"></div>
-                            <div class="label"></div>
+                <div class="form-group">
+                    <label for="password" class="d-block">Password</label>
+                    <input id="password" type="password" class="form-control pwstrength" data-indicator="pwindicator"
+                        name="password">
+                    <div id="pwindicator" class="pwindicator">
+                        <div class="bar"></div>
+                        <div class="label"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password2" class="d-block">Password Confirmation</label>
+                    <input id="password2" type="password"
+                        class="form-control @error('password_confirmation') is-invalid @enderror"
+                        name="password_confirmation">
+                    @error('password_confirmation')
+                        <div class="invalid-feedback">
+                            {{ $message }}
                         </div>
-                    </div>
-                    <div class="form-group col-6">
-                        <label for="password2"
-                            class="d-block">Password Confirmation</label>
-                        <input id="password2"
-                            type="password"
-                            class="form-control @error('password_confirmation') is-invalid @enderror"
-                            name="password_confirmation">
-                        @error('password_confirmation')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                        @enderror
-                    </div>
+                    @enderror
                 </div>
 
                 <div class="form-group">
-                    <button type="submit"
-                        class="btn btn-primary btn-lg btn-block">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">
                         Register
                     </button>
                 </div>
