@@ -21,11 +21,22 @@
             "Larastart\\LaravelStaterkit\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Larastart\\LaravelStaterkit\\LaravelStaterkitServiceProvider::class"
+            ]
+        }
+    },
     "authors": [
         {
             "name": "hanifazhar77",
             "email": "hanifazharramadhan879@gmail.com"
         }
     ],
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
     "minimum-stability": "dev"
 }
