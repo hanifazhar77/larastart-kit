@@ -1,6 +1,6 @@
 # Larastart-Kit
 
-Larastart-Kit is a starter kit for Laravel that provides an admin template like Stisla, customized for Laravel. With Larastart-Kit, you can easily set up and use an admin template in your Laravel project.
+Larastart-Kit is a starter kit for Laravel that provides an admin template like Stisla, AdminLTE, etc, customized for Laravel. With Larastart-Kit, you can easily set up and use an admin template in your Laravel project.
 
 ## Features
 - Integration with Laravel
