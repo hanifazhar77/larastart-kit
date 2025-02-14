@@ -1,12 +1,8 @@
-@extends('layouts.app')
+<x-app-layout title="Dashboard">
+    @push('style')
+        <!-- CSS Libraries -->
+    @endpush
 
-@section('title', 'Dashboard')
-
-@push('style')
-    <!-- CSS Libraries -->
-@endpush
-
-@section('content')
     <div class="main-content">
         <section class="section">
             <div class="section-header">
@@ -17,10 +13,10 @@
             </div>
         </section>
     </div>
-@endsection
 
-@push('scripts')
-    <!-- JS Libraies -->
+    @push('scripts')
+        <!-- JS Libraies -->
 
-    <!-- Page Specific JS File -->
-@endpush
+        <!-- Page Specific JS File -->
+    @endpush
+</x-app-layout>
