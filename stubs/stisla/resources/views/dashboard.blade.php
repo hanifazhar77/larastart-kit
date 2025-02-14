@@ -1,26 +1,24 @@
-@extends('layouts.app')
+<x-app-layout title="Dashboard">
+    @push('style')
+        <!-- CSS Libraries -->
+    @endpush
 
-@section('title', 'Dashboard')
+    <x-slot name="content">
+        <div class="main-content">
+            <section class="section">
+                <div class="section-header">
+                    <h1>Dashboard</h1>
+                </div>
 
-@push('style')
-    <!-- CSS Libraries -->
-@endpush
+                <div class="section-body">
+                </div>
+            </section>
+        </div>
+    </x-slot>
 
-@section('content')
-    <div class="main-content">
-        <section class="section">
-            <div class="section-header">
-                <h1>Dashboard</h1>
-            </div>
+    @push('scripts')
+        <!-- JS Libraies -->
 
-            <div class="section-body">
-            </div>
-        </section>
-    </div>
-@endsection
-
-@push('scripts')
-    <!-- JS Libraies -->
-
-    <!-- Page Specific JS File -->
-@endpush
+        <!-- Page Specific JS File -->
+    @endpush
+</x-app-layout>
