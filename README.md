@@ -8,8 +8,8 @@ Larastart-Kit is a starter kit for Laravel that provides an admin template like 
 - Artisan command for selecting an admin template
 
 ## Admin Templates
-- Stisla
-- AdminLTE (coming soon)
+- [Stisla](https://github.com/stisla/stisla)
+- [AdminLTE](https://github.com/ColorlibHQ/AdminLTE) (coming soon)
 
 ## Installation
 To install Larastart-Kit in your Laravel project, run the following command in the terminal:
