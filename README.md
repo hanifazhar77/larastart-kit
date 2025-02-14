@@ -26,6 +26,10 @@ php artisan larastart:install
 
 Follow the on-screen instructions to complete the installation process.
 
+## Documentation
+
+For more detailed information on how to use Admin Template, please refer to the documentation of the admin template you have chosen.
+
 ## Contribution
 If you would like to contribute to the development of Larastart-Kit, please fork this repository and create a pull request with the changes you want to add.
 
