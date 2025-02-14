@@ -17,8 +17,15 @@
     </x-slot>
 
     @push('scripts')
-        <!-- JS Libraies -->
-
-        <!-- Page Specific JS File -->
+        <script>
+            @if (session('login_success'))
+                Swal.fire({
+                    title: 'Success',
+                    text: 'You have successfully logged in',
+                    icon: 'success',
+                    timer: 1500
+                });
+            @endif
+        </script>
     @endpush
 </x-app-layout>
