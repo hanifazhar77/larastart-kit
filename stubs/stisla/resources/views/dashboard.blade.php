@@ -3,16 +3,18 @@
         <!-- CSS Libraries -->
     @endpush
 
-    <div class="main-content">
-        <section class="section">
-            <div class="section-header">
-                <h1>Dashboard</h1>
-            </div>
+    <x-slot name="content">
+        <div class="main-content">
+            <section class="section">
+                <div class="section-header">
+                    <h1>Dashboard</h1>
+                </div>
 
-            <div class="section-body">
-            </div>
-        </section>
-    </div>
+                <div class="section-body">
+                </div>
+            </section>
+        </div>
+    </x-slot>
 
     @push('scripts')
         <!-- JS Libraies -->
