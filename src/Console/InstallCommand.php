@@ -178,7 +178,7 @@ class InstallCommand extends Command implements PromptsForMissingInput
     {
         return [
             'stack' => fn() => select(
-                label: 'Which Stisla stack would you like to install?',
+                label: 'Which admin template would you like to install?',
                 options: [
                     'stisla' => 'Stisla',
                 ],
