@@ -19,7 +19,7 @@
     @push('scripts')
         <script>
             @if (session('login_success'))
-                Swal.fire({
+                swal({
                     title: 'Success',
                     text: 'You have successfully logged in',
                     icon: 'success',
