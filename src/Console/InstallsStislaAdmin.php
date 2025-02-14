@@ -31,31 +31,31 @@ trait InstallsStislaAdmin
         // Requests...
         (new Filesystem)->ensureDirectoryExists(app_path('Http/Requests'));
         (new Filesystem)->copyDirectory(__DIR__ . '/../../stubs/stisla/app/Http/Requests', app_path('Http/Requests'));
-        $progressBar->setMessage('Requests installed...');
+        $progressBar->setMessage('Requests installing...');
         $progressBar->advance();
 
         // Views...
         (new Filesystem)->ensureDirectoryExists(resource_path('views'));
         (new Filesystem)->copyDirectory(__DIR__ . '/../../stubs/stisla/resources/views', resource_path('views'));
-        $progressBar->setMessage('Views installed...');
+        $progressBar->setMessage('Views installing...');
         $progressBar->advance();
 
         // Components...
         (new Filesystem)->ensureDirectoryExists(app_path('View/Components'));
         (new Filesystem)->copyDirectory(__DIR__ . '/../../stubs/stisla/app/View/Components', app_path('View/Components'));
-        $progressBar->setMessage('Components installed...');
+        $progressBar->setMessage('Components installing...');
         $progressBar->advance();
 
         // Routes...
         copy(__DIR__.'/../../stubs/stisla/routes/web.php', base_path('routes/web.php'));
         copy(__DIR__.'/../../stubs/stisla/routes/auth.php', base_path('routes/auth.php'));
-        $progressBar->setMessage('Routes installed...');
+        $progressBar->setMessage('Routes installing...');
         $progressBar->advance();
 
         // "Dashboard" Route...
         $this->replaceInFile('/home', '/dashboard', resource_path('views/welcome.blade.php'));
         $this->replaceInFile('Home', 'Dashboard', resource_path('views/welcome.blade.php'));
-        $progressBar->setMessage('Dashboard route installed...');
+        $progressBar->setMessage('Dashboard route installing...');
         $progressBar->advance();
 
 
@@ -70,7 +70,7 @@ trait InstallsStislaAdmin
         foreach ($assets as $asset) {
             (new Filesystem)->ensureDirectoryExists(public_path($asset));
             (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/stisla/public/'.$asset, public_path($asset));
-            $progressBar->setMessage('Assets installed...');
+            $progressBar->setMessage('Assets installing...');
             $progressBar->advance();
         }
         $progressBar->setMessage('Finalizing...');
